@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+
+<div class="content">
+    <div th:replace="fragments/navbar :: navbar"/>
+
+    <!-- Banner -->
+    <div class="banner" id="banner">
+        <img src="/img/banner_del.png">
+    </div>
+
+    <div>
+        <table class="main_category">
+            <colgroup>
+                <col width="25%">
+                <col width="25%">
+                <col width="25%">
+                <col width="25%">
+            </colgroup>
+            <tr>
+                <td><a href="https://lms.ggu.ac.kr"><img src="/img/lms.png">LMS</a></td>
+                <td><a href="https://www.ggu.ac.kr/sub050501"><img src="/img/schoolbus.png">버스예약</a></td>
+                <td><a href="https://certmis.ggu.ac.kr"><img src="/img/lms.png">종합정보시스템</a></td>
+                <td><a href="https://dorm.ggu.ac.kr/sub0403"><img src="/img/overnight.png">외박신청</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <hr class="division">
+
+    <div class="mt">
+        <a href="https://www.ggu.ac.kr/sub01080101">
+            <div class="main_header ms">
+                <div>공지사항</div>
+                <div>더보기 > </div>
+            </div>
+        </a>
+
+        <div class="mnt ms">
+            <div>학사</div>
+            <div>비교과</div>
+            <div>취업</div>
+            <div>일반</div>
+        </div>
+
+        <div id="mnc" class="mnc">
+            <img src="/img/loading.gif" alt="Loading..." align="center"/>
+        </div>
+    </div>
+
+    <hr class="division">
+
+    <div class="mt">
+        <a href="/menu">
+            <div class="main_header ms">
+                <div>오늘의 학식 <span id="today" class="us"></span></div>
+                <div>더보기 > </div>
+            </div>
+        </a>
+
+        <hr class="mt">
+
+        <div class="ms">
+            <div class="menu_date">
+                <div id="prev"> ＜ </div>
+                <div id="date"></div>
+                <div id="next"> ＞ </div>
+            </div>
+
+            <div id="header" class="vp menu_header">
+                <div id="breakfast">조식</div>
+                <div id="lunch">중식</div>
+                <div id="dinner">석식</div>
+            </div>
+
+            <div id="body" class="mmc">
+            </div>
+        </div>
+    </div>
+
+    <hr class="division">
+
+    <div class="mt">
+        <a href="/bus">
+            <div class="main_header ms">
+                <div>덕성버스</div>
+                <div>더보기 > </div>
+            </div>
+        </a>
+
+        <hr class="mt">
+
+        <div class="ms">
+            <div class="mbh">
+                <div>출발</div>
+                <div id="busChange" class="radius"><img src="/img/change.png"/></div>
+                <div>도착</div>
+            </div>
+
+            <div id="mbc" class="mt mbc">
+            </div>
+
+            <div id="mbt" class="mbt us_radius">
+            </div>
+        </div>
+    </div>
+
+    <!-- 로딩 바 -->
+    <div id="loading">
+        <img id="loading-image" src="/img/loading.gif" alt="Loading..." />
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"/>
+</div> <!-- /container -->
+</body>
+
+<script th:inline="javascript">
+
+    $(document).ready(function () {
+
+        hideLoadingBar();
+    });
+
+
+</script>
+
+</html>
